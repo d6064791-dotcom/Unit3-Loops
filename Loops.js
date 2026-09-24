@@ -10,16 +10,20 @@
 // ---------- Problem 1: Range Builder ----------
 // Return an array of every integer from start to end, inclusive.
 // Use a for loop and .push() to build the array one number at a time.
+const myArray = [];
 function getNumbersInRange(start, end) {
-  // TODO: your code here
-
+  for (let i = start; i < end; start++) {
+  myArray.push(start); 
 }
+  return myArray
+}
+console.log(myArray);
 
 console.log(getNumbersInRange(1, 5));  // [1, 2, 3, 4, 5]
 console.log(getNumbersInRange(10, 10)); // [10]
 console.log(getNumbersInRange(3, 8));  // [3, 4, 5, 6, 7, 8]
 
-
+/*
 // ---------- Problem 2: Sum a Range ----------
 // Return the sum of every integer from start to end, inclusive.
 // Use the accumulator pattern: let total = 0; total += i; each pass.
@@ -104,3 +108,4 @@ function multiplicationTableSkipDiagonal(n) {
 }
 
 console.log(multiplicationTableSkipDiagonal(3));
+*/
