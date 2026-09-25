@@ -12,18 +12,20 @@
 // Use a for loop and .push() to build the array one number at a time.
 const myArray = [];
 function getNumbersInRange(start, end) {
-  for (let i = start; i < end; start++) {
-  myArray.push(start); 
+  for (let i = start; i < end; i++) {
+  return i
 }
-  return myArray
 }
-console.log(myArray);
+for (let i = 0; i < 5; i++) {
+  console.log(i)
+}
 
+/*
 console.log(getNumbersInRange(1, 5));  // [1, 2, 3, 4, 5]
 console.log(getNumbersInRange(10, 10)); // [10]
 console.log(getNumbersInRange(3, 8));  // [3, 4, 5, 6, 7, 8]
 
-/*
+
 // ---------- Problem 2: Sum a Range ----------
 // Return the sum of every integer from start to end, inclusive.
 // Use the accumulator pattern: let total = 0; total += i; each pass.
