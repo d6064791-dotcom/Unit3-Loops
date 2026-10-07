@@ -74,22 +74,32 @@ console.log(countdown(8)); // [8, 7, 6, 5, 4, 3, 2, 1]
 // check whether that character is a vowel. Access a character with
 // str[i] or str.charAt(i).
 const vowels = ["a","e","i","o","u"]
+let amount = 0
 function countVowels(str) {
-let amount = []
+
+  
 vowels.forEach(myFunction);
-function myFunction(item) {
-  if (str.includes(item)) {
-    amount += item
+
     
+function myFunction(item) {
+  for (let i = 0; i < str.length; i++) {
+    if (item === i){
+      amount += 1
+      console.log(amount)
+
+    }
   }
+  
 }
-console.log(amount)
+
 }
+countVowels("happily")
+
   
   
 
 
-countVowels("haappy")
+
 //console.log(countVowels("hello"));      // 2
 /*
 console.log(countVowels("javascript")); // 3
