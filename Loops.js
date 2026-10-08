@@ -66,7 +66,7 @@ console.log(countdown(5)); // [5, 4, 3, 2, 1]
 
 console.log(countdown(1)); // [1]
 console.log(countdown(8)); // [8, 7, 6, 5, 4, 3, 2, 1]
-*/
+
 
 // ---------- Problem 4: Count the Vowels ----------
 // Return the number of vowels (a, e, i, o, u — lowercase only) in str.
@@ -75,37 +75,31 @@ console.log(countdown(8)); // [8, 7, 6, 5, 4, 3, 2, 1]
 // str[i] or str.charAt(i).
 const vowels = ["a","e","i","o","u"]
 let amount = 0
-function countVowels(str) {
-
-  
-vowels.forEach(myFunction);
-
-    
-function myFunction(item) {
+function countVowels(str) { 
+  amount = 0  
   for (let i = 0; i < str.length; i++) {
-    if (item === i){
-      amount += 1
-      console.log(amount)
-
+    for (let e = 0; e < vowels.length; e++) {
+      if (vowels[e] === str[i]){
+        amount += 1
+      }
     }
   }
-  
+  return amount
 }
 
-}
-countVowels("happily")
+//console.log(countVowels("happily"))
 
   
   
 
 
 
-//console.log(countVowels("hello"));      // 2
-/*
+console.log(countVowels("hello"));      // 2
+
 console.log(countVowels("javascript")); // 3
 console.log(countVowels("xyz"));        // 0
 console.log(countVowels("aeiou"));      // 5
-
+*/
 
 // ---------- Problem 5: Multiplication Table ----------
 // Return a string showing the multiplication table from 1 to n,
@@ -114,14 +108,16 @@ console.log(countVowels("aeiou"));      // 5
 // build each row as its own string before adding it to the result.
 function multiplicationTable(n) {
   // TODO: your code here
-
+  for (let i = 0; i < n; i++) {
+    
+  } 
 }
 
 console.log(multiplicationTable(3));
 // "1 2 3\n2 4 6\n3 6 9"
 console.log(multiplicationTable(5));
 
-
+/*
 // ---------- Problem 6: Primes Under a Limit ----------
 // Return an array of every prime number less than limit.
 // A prime number is greater than 1 and has no divisors other
