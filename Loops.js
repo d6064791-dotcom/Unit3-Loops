@@ -109,11 +109,13 @@ console.log(countVowels("aeiou"));      // 5
 function multiplicationTable(n) {
   // TODO: your code here
   firstRow = []
-  for (let i = 0; i < n; i++) {
-    
-    firstRow i
+  for (let i = 1; i <= n; i++) {
+    for (let e = i; e <= n*i; e+=i){
+      firstRow.push(e)
+    }
+    firstRow.push("/n")
   } 
-  
+  return firstRow
 }
 console.log(multiplicationTable(3));
 
