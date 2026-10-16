@@ -99,30 +99,31 @@ console.log(countVowels("hello"));      // 2
 console.log(countVowels("javascript")); // 3
 console.log(countVowels("xyz"));        // 0
 console.log(countVowels("aeiou"));      // 5
-*/
+
 
 // ---------- Problem 5: Multiplication Table ----------
 // Return a string showing the multiplication table from 1 to n,
 // one row per line (rows separated by "\n"). Each row shows n
 // products separated by spaces. Needs a loop inside a loop —
 // build each row as its own string before adding it to the result.
+
 function multiplicationTable(n) {
-  // TODO: your code here
-  firstRow = []
+  const rows = [];
   for (let i = 1; i <= n; i++) {
-    for (let e = i; e <= n*i; e+=i){
-      firstRow.push(e)
+    const row = [];
+    for (let j = 1; j <= n; j++) {
+      row.push(i * j);
     }
-    firstRow.push("/n")
-  } 
-  return firstRow
+    rows.push(row.join(" "));
+  }
+  return rows.join(" \n");
 }
 console.log(multiplicationTable(3));
 
 // "1 2 3\n2 4 6\n3 6 9"
-// console.log(multiplicationTable(5));
+ console.log(multiplicationTable(5));
+*/
 
-/*
 // ---------- Problem 6: Primes Under a Limit ----------
 // Return an array of every prime number less than limit.
 // A prime number is greater than 1 and has no divisors other
@@ -130,16 +131,30 @@ console.log(multiplicationTable(3));
 // to (but not including) that number and check
 // candidate % divisor === 0. A boolean flag that flips to false
 // when a divisor is found works well here.
+
 function primesUnder(limit) {
   // TODO: your code here
-
+  let output = []
+  let amountoffactor = 0
+  for (let i = 2; i < limit; i++){
+      for (let e = i; e > 0; e+-1){
+        if (i % e === 0){
+            amountoffactor += 1
+        }
+      }
+      if (amountoffactor === 2){
+        output.push(i)
+        amountoffactor = 0
+      }
+  }
+  return output
 }
 
 console.log(primesUnder(10)); // [2, 3, 5, 7]
-console.log(primesUnder(20)); // [2, 3, 5, 7, 11, 13, 17, 19]
-console.log(primesUnder(2));  // []
+//console.log(primesUnder(20)); // [2, 3, 5, 7, 11, 13, 17, 19]
+//console.log(primesUnder(2));  // []
 
-
+/*
 // ---------- Stretch (optional) ----------
 // Rewrite multiplicationTable so it uses break or continue to skip
 // printing the row where the row number equals the column number
